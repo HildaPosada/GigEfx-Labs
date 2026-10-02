@@ -1,5 +1,12 @@
 # GigEfx Pricing Intelligence
 
+## Verified deployment status · October 1, 2026
+
+The [web demo](https://gigefx-demo.vercel.app/) displays seven fixed example products and an illustrative chart. It is not connected to the scraper or a current retailer feed. Random price updates were removed. Live collection and data quality claims are not verified by this demo.
+
+See [deployment source and scope](web/README.md) and the [portfolio audit](https://github.com/HildaPosada/hildaposada.github.io/blob/main/docs/project_audit.md). Historical descriptions below are not evidence of a connected production backend.
+
+
 > **[Live Demo](https://gigefx-demo.vercel.app)** | Real-time pricing database tracking 1,247 products across 5 African markets.
 
 ![Demo Screenshot](demo-screenshot.png)
