@@ -1,5 +1,11 @@
 # GigEfx Pricing Intelligence
 
+[![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![Selenium](https://img.shields.io/badge/Selenium-43B02A?style=for-the-badge&logo=selenium&logoColor=white)](https://www.selenium.dev/)
+[![Chart.js](https://img.shields.io/badge/Chart.js-FF6384?style=for-the-badge&logo=chartdotjs&logoColor=white)](https://www.chartjs.org/)
+[![Vercel](https://img.shields.io/badge/Vercel-171717?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com/)
+
+
 ## Verified deployment status · October 1, 2026
 
 The [web demo](https://gigefx-demo.vercel.app/) displays seven fixed example products and an illustrative chart. It is not connected to the scraper or a current retailer feed. Random price updates were removed. Live collection and data quality claims are not verified by this demo.
