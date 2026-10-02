@@ -1,0 +1,205 @@
+{
+  "source": "https://littlebirdelectronics.com.au/public-api/v1/products?per_page=25&q=raspberry",
+  "currency": "AUD",
+  "observations": [
+    {
+      "observed_at": "2026-10-02T06:08:15.189358+00:00",
+      "source_sha256": "2b291ca3185396258687f340825d7d431c065fc3de1756940cac7cff113f05f3",
+      "excluded_rows": 1,
+      "products": [
+        {
+          "handle": "raspberry-pi-5",
+          "title": "Raspberry Pi 5",
+          "price": 89.0,
+          "price_currency": "AUD",
+          "in_stock": true,
+          "sku": "RP-SC2162"
+        },
+        {
+          "handle": "raspberry-pi-400",
+          "title": "Raspberry Pi 400",
+          "price": 168.23,
+          "price_currency": "AUD",
+          "in_stock": true,
+          "sku": "RP-SC0513"
+        },
+        {
+          "handle": "raspberry-pi-500",
+          "title": "Raspberry Pi 500",
+          "price": 349.0,
+          "price_currency": "AUD",
+          "in_stock": true,
+          "sku": "RP-SC1822"
+        },
+        {
+          "handle": "raspberry-pi-pico",
+          "title": "Raspberry Pi Pico",
+          "price": 7.6,
+          "price_currency": "AUD",
+          "in_stock": true,
+          "sku": "RP-SC0915"
+        },
+        {
+          "handle": "raspberry-pi-500-plus",
+          "title": "Raspberry Pi 500+",
+          "price": 759.95,
+          "price_currency": "AUD",
+          "in_stock": true,
+          "sku": "RP-SC2103"
+        },
+        {
+          "handle": "raspberry-pi-zero-w",
+          "title": "Raspberry Pi Zero W",
+          "price": 29.19,
+          "price_currency": "AUD",
+          "in_stock": true,
+          "sku": "RP-SC0020"
+        },
+        {
+          "handle": "raspberry-pi-pico-2",
+          "title": "Raspberry Pi Pico 2",
+          "price": 9.92,
+          "price_currency": "AUD",
+          "in_stock": true,
+          "sku": "RP-SC1631"
+        },
+        {
+          "handle": "raspberry-pi-pico-h",
+          "title": "Raspberry Pi Pico H",
+          "price": 5.95,
+          "price_currency": "AUD",
+          "in_stock": true,
+          "sku": "RP-SC0917"
+        },
+        {
+          "handle": "raspberry-pi-display",
+          "title": "Raspberry Pi Display",
+          "price": 149.95,
+          "price_currency": "AUD",
+          "in_stock": true,
+          "sku": "RP-SC1227"
+        },
+        {
+          "handle": "raspberry-pi-ups-hat",
+          "title": "Raspberry Pi UPS HAT",
+          "price": 29.5,
+          "price_currency": "AUD",
+          "in_stock": true,
+          "sku": "DF-DFR0494"
+        },
+        {
+          "handle": "raspberry-pi-monitor",
+          "title": "Raspberry Pi Monitor",
+          "price": 177.0,
+          "price_currency": "AUD",
+          "in_stock": true,
+          "sku": "RP-SC0940"
+        },
+        {
+          "handle": "raspberry-pi-pico-wh",
+          "title": "Raspberry Pi Pico WH",
+          "price": 12.95,
+          "price_currency": "AUD",
+          "in_stock": true,
+          "sku": "RP-SC0919"
+        },
+        {
+          "handle": "raspberry-pi-pico-2wh",
+          "title": "Raspberry Pi Pico 2WH",
+          "price": 15.44,
+          "price_currency": "AUD",
+          "in_stock": true,
+          "sku": "RP-SC1633-2WH"
+        },
+        {
+          "handle": "raspberry-pi-m-2-hat-plus",
+          "title": "Raspberry Pi M.2 HAT+",
+          "price": 21.28,
+          "price_currency": "AUD",
+          "in_stock": true,
+          "sku": "RP-SC1166"
+        },
+        {
+          "handle": "raspberry-pi-ai-camera",
+          "title": "Raspberry Pi AI Camera",
+          "price": 124.43,
+          "price_currency": "AUD",
+          "in_stock": true,
+          "sku": "RP-SC1174"
+        },
+        {
+          "handle": "raspberry-pi-ai-hat-plus-2",
+          "title": "Raspberry Pi AI HAT+ 2",
+          "price": 317.96,
+          "price_currency": "AUD",
+          "in_stock": true,
+          "sku": "RP-SC2166"
+        },
+        {
+          "handle": "fan-for-raspberry-pi-4",
+          "title": "Fan for Raspberry Pi 4",
+          "price": 7.45,
+          "price_currency": "AUD",
+          "in_stock": true,
+          "sku": "LB-LS1727"
+        },
+        {
+          "handle": "raspberry-pi-4-model-b",
+          "title": "Raspberry Pi 4 Model B",
+          "price": 70.61,
+          "price_currency": "AUD",
+          "in_stock": true,
+          "sku": "RP-SC0192"
+        },
+        {
+          "handle": "raspberry-pi-3-model-b-plus",
+          "title": "Raspberry Pi 3 Model B+",
+          "price": 83.23,
+          "price_currency": "AUD",
+          "in_stock": true,
+          "sku": "RP-SC0073"
+        },
+        {
+          "handle": "camera-for-raspberry-pi",
+          "title": "Camera for Raspberry Pi",
+          "price": 46.45,
+          "price_currency": "AUD",
+          "in_stock": true,
+          "sku": "DF-SEN0173"
+        },
+        {
+          "handle": "raspberry-pi-enamel-pin",
+          "title": "Raspberry Pi Enamel Pin",
+          "price": 5.85,
+          "price_currency": "AUD",
+          "in_stock": true,
+          "sku": "AF-4752"
+        },
+        {
+          "handle": "raspberry-pi-5-cool-kit",
+          "title": "Raspberry Pi 5 Cool Kit",
+          "price": 205.0,
+          "price_currency": "AUD",
+          "in_stock": true,
+          "sku": "LB-RPI5-COOL-2GB"
+        },
+        {
+          "handle": "raspberry-pi-5-mega-kit",
+          "title": "Raspberry Pi 5 Mega Kit",
+          "price": 379.0,
+          "price_currency": "AUD",
+          "in_stock": true,
+          "sku": "LB-RPI5-MEGA-4GB"
+        },
+        {
+          "handle": "raspberry-pi-usb-3-hub",
+          "title": "Raspberry Pi USB 3.0 Hub",
+          "price": 19.75,
+          "price_currency": "AUD",
+          "in_stock": true,
+          "sku": "RP-SC1636"
+        }
+      ]
+    }
+  ]
+}
