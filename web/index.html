@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>GigEfx Sample Pricing Dashboard</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#0d0d0d;color:#e8e6e3;font-family:system-ui,sans-serif}
+.topbar{background:#141414;border-bottom:1px solid #242424;padding:1rem 2rem;display:flex;align-items:center;gap:1rem}
+.topbar h1{font-size:1.1rem;font-weight:700}
+.dot{width:8px;height:8px;border-radius:50%;background:#00c896;animation:pulse 1.8s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+.live{display:flex;align-items:center;gap:.4rem;font-size:.75rem;color:#00c896;font-weight:700}
+.main{max-width:1100px;margin:0 auto;padding:2rem}
+.kpi-row{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-bottom:1.5rem}
+.kpi{background:#141414;border:1px solid #242424;border-radius:.75rem;padding:1rem 1.25rem}
+.kpi-label{font-size:.7rem;color:#888;text-transform:uppercase;letter-spacing:.08em}
+.kpi-val{font-size:1.5rem;font-weight:800;color:#00c896;margin-top:.25rem}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-bottom:1.5rem}
+.card{background:#141414;border:1px solid #242424;border-radius:.75rem;padding:1.25rem}
+.card h3{font-size:.75rem;color:#888;text-transform:uppercase;letter-spacing:.08em;margin-bottom:1rem}
+table{width:100%;border-collapse:collapse}
+th{font-size:.7rem;color:#555;text-align:left;padding:.4rem .5rem;border-bottom:1px solid #242424;text-transform:uppercase}
+td{font-size:.8rem;padding:.5rem;border-bottom:1px solid #1a1a1a}
+.up{color:#00c896}.down{color:#f43f5e}.neu{color:#888}
+.market-tag{font-size:.65rem;background:#1a1a1a;padding:.15rem .5rem;border-radius:999px;color:#888}
+.footer{text-align:center;padding:1.5rem;font-size:.75rem;color:#444}
+.footer a{color:#00c896;text-decoration:none}
+@media(max-width:768px){.kpi-row,.grid2{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <div style="font-size:1.5rem">📡</div>
+  <h1>GigEfx Pricing Intelligence</h1>
+  <div class="live"><div class="dot"></div>Static sample data · 5 example markets</div>
+  <div style="margin-left:auto;font-size:.75rem;color:#555">Built by <a href="https://hildaposada.github.io" style="color:#00c896;text-decoration:none">Hilda Posada</a></div>
+</div>
+<div class="main"><p style="color:#aaa;margin-bottom:1rem">This is a fixed demonstration dataset. Prices are illustrative and do not reflect current retailers. The repository includes a separate scraper, which is not connected to this page.</p>
+  <div class="kpi-row">
+    <div class="kpi"><div class="kpi-label">Sample rows</div><div class="kpi-val" id="kpi1">7</div></div>
+    <div class="kpi"><div class="kpi-label">Markets</div><div class="kpi-val">5</div></div>
+    <div class="kpi"><div class="kpi-label">Live updates</div><div class="kpi-val">Not connected</div></div>
+    <div class="kpi"><div class="kpi-label">Source</div><div class="kpi-val">Illustrative</div></div>
+  </div>
+  <div class="grid2">
+    <div class="card">
+      <h3>Price Trend · GPUs (30 illustrative days)</h3>
+      <canvas id="priceChart" height="140"></canvas>
+    </div>
+    <div class="card">
+      <h3>Market Coverage</h3>
+      <canvas id="marketChart" height="140"></canvas>
+    </div>
+  </div>
+  <div class="card">
+    <h3>Sample Price Table — Electronics</h3>
+    <table>
+      <thead><tr><th>Product</th><th>Market</th><th>Price (USD)</th><th>24h Change</th><th>Availability</th></tr></thead>
+      <tbody id="priceTable"></tbody>
+    </table>
+  </div>
+</div>
+<div class="footer"><a href="https://github.com/HildaPosada/GigEfx-Labs" target="_blank">View code on GitHub →</a></div>
+<script>
+Chart.defaults.color='#888';Chart.defaults.borderColor='#1a1a1a';
+const days=Array.from({length:30},(_,i)=>'Day '+(i+1));
+const base=[820,815,830,845,840,825,810,800,795,810,820,835,850,860,845,830,820,815,825,840,855,870,865,850,840,830,820,815,825,835];
+new Chart(document.getElementById('priceChart'),{type:'line',data:{labels:days,datasets:[{label:'RTX 4070',data:base,borderColor:'#00c896',backgroundColor:'rgba(0,200,150,0.06)',fill:true,tension:0.4,pointRadius:0,borderWidth:2},{label:'RTX 3080',data:base.map(v=>v-180),borderColor:'#3b82f6',fill:false,tension:0.4,pointRadius:0,borderWidth:2}]},options:{plugins:{legend:{position:'bottom'}},scales:{y:{ticks:{callback:v=>'$'+v}}}}});
+new Chart(document.getElementById('marketChart'),{type:'doughnut',data:{labels:['South Africa','Nigeria','Kenya','Ghana','Egypt'],datasets:[{data:[38,24,18,12,8],backgroundColor:['#00c896','#3b82f6','#8b5cf6','#f59e0b','#f43f5e'],borderWidth:0}]},options:{plugins:{legend:{position:'bottom'}},cutout:'60%'}});
+const products=[
+  ['RTX 4070 Ti','South Africa','$895','▲ +2.1%','up','In Stock'],
+  ['iPhone 15 Pro','Nigeria','$1,120','▼ -1.3%','down','Limited'],
+  ['MacBook Air M3','Kenya','$1,349','— 0.0%','neu','In Stock'],
+  ['Samsung 65" QLED','Ghana','$780','▲ +0.8%','up','In Stock'],
+  ['PS5 Console','Egypt','$520','▼ -3.2%','down','Out of Stock'],
+  ['RTX 3080','South Africa','$645','▲ +1.4%','up','In Stock'],
+  ['iPad Pro 12.9"','Nigeria','$1,099','— 0.0%','neu','Limited'],
+];
+document.getElementById('priceTable').innerHTML=products.map(([p,m,pr,ch,cls,av])=>`<tr><td>${p}</td><td><span class="market-tag">${m}</span></td><td><strong>${pr}</strong></td><td class="${cls}">${ch}</td><td style="color:${av==='In Stock'?'#00c896':av==='Limited'?'#f59e0b':'#f43f5e'}">${av}</td></tr>`).join('');
+
+</script>
+</body>
+</html>
